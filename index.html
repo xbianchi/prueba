@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué prefieres?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>¿Qué prefieres?</h1>
+
+        <!-- Selector de categorías -->
+        <div id="category-selector">
+            <label for="categories">Elige una categoría:</label>
+            <select id="categories">
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="pokemon">Pokémon</option>
+                <option value="comidas">Comidas</option>
+                <option value="equipos">Equipos de fútbol</option>
+                <option value="rupaulUSA">Queens de RuPaul USA</option>
+                <option value="rupaulUK">Queens de RuPaul UK</option>
+                <option value="rupaulDownUnder">Queens de RuPaul Down Under</option>
+                <option value="rupaulHolland">Queens de RuPaul Holanda</option>
+                <option value="rupaulEspana">Queens de RuPaul España</option>
+                <option value="rupaulAll">Todas las Queens de RuPaul</option>
+            </select>
+            <button onclick="startGame()">Comenzar Juego</button>
+        </div>
+
+        <!-- Área del juego donde aparecerán las opciones -->
+        <div id="game-area" style="display: none;">
+            <div id="option1" class="card"></div>
+            <div id="option2" class="card"></div>
+        </div>
+
+        <!-- Top 3 -->
+        <div id="top3" style="display: none;"></div>
+    </div>
+
+    <!-- Firebase y tus scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
